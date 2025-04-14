@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CalendarIcon, MapPinIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,7 +19,7 @@ const Hero = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="text-center md:text-left md:max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tech Team Offsite</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Netcore Offsite - Goa</h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-white/90 mb-6">Goa 2025</h2>
           
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-3 md:space-y-0 md:space-x-6 mb-8">

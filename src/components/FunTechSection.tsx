@@ -1,11 +1,29 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Brain, FilePlus, Dice6, Lightbulb, Mic, Check, PartyPopper } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const FunTechSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const checkVisibility = () => {
+      const targetDate = new Date('2025-04-16T00:30:00Z'); // 6 AM IST (UTC+5:30)
+      const currentDate = new Date();
+      setIsVisible(currentDate >= targetDate);
+    };
+
+    checkVisibility();
+    const interval = setInterval(checkVisibility, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <section id="funtech" className="py-16 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
